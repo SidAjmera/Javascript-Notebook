@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Madlibs</title>
+</head>
+<body>
+     <h1>Madlibs</h1>
+     <label for="nameInput">
+          Name:
+          <br>
+          <input type="text" id="nameInput">
+     </label>
+     <br>
+     <label for="name2Input">
+          Another Name:
+          <br>
+          <input type="text" id="name2Input">
+     </label>
+     <br>
+     <label for="planetInput">
+          Planet:
+          <br>
+          <input type="text" id="planetInput">
+     </label>
+     <br>
+     <label for="thingInput">
+          Thing:
+          <br>
+          <input type="text" id="thingInput">
+     </label>
+     <br>
+     <label for="vehicleInput">
+          Vehicle:
+          <br>
+          <input type="text" id="vehicleInput">
+     </label>
+     <br>
+     <label for="verbInput">
+          Verb:
+          <br>
+          <input type="text" id="verbInput">
+     </label>
+     <br>
+     <label for="animalInput">
+          Animal:
+          <br>
+          <input type="text" id="animalInput">
+     </label>
+     <br>
+     <label for="adjectiveInput">
+          Adjective:
+          <br>
+          <input type="text" id="adjectiveInput">
+     </label>
+     <br>
+     <label id="place" for="">
+          Place:
+          <br>
+          <input type="text" id="placeInput">
+     </label>
+     <br>
+     <button id="submit">Submit!</button>
+     <p><span id="name1">...</span> and <span id="name2">...</span> went to <span id="planet1">...</span> in search of <span id="thing1">...</span>. They travelled on their <span id="vehicle1">...</span>. Once they reached, they started <span id="verb1">...</span> everywhere. Suddenly they were stopped by a <span id="animal1">...</span>. It was so <span id="adjective1">...</span> that they decided to bring it back to <span id="place1">...</span>. </p>
+
+     <script>
+          function myFunction() {
+               name1.textContent = nameInput.value;
+               name2.textContent = name2Input.value;
+               planet1.textContent = planetInput.value;
+               thing1.textContent = thingInput.value;
+               vehicle1.textContent = vehicleInput.value;
+               verb1.textContent = verbInput.value;
+               animal1.textContent = animalInput.value;
+               adjective1.textContent = adjectiveInput.value;
+               place1.textContent = placeInput.value;
+          }
+          submit.onclick = myFunction;
+     </script>
+     
+</body>
+</html>

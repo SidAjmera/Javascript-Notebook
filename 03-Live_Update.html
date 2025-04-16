@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Live Update</title>
+</head>
+<body>
+     <h1>Live Update</h1>
+     <img src="CCCMedia_Logo_img.png" alt="Central City Citizen Media Logo">
+     <img src="Flash_img.avif" alt="Picture of the Flash (CW)">
+     <h2>The Real name of the Flash is <span id="mySpan">...</span></h2>
+     <input type="text" id="myInput">
+     <script>
+          function myFunction () {
+               mySpan.textContent = myInput.value;
+          }
+          myInput.oninput = myFunction;
+     </script>
+</body>
+</html>

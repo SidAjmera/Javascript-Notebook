@@ -1,0 +1,32 @@
+<DOCTYPE html>
+     <html lang="en">
+     <head>
+          <meta charset="UTF-8" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+          <title>Chat</title>
+     </head> 
+     <body>
+          <h1>Person A</h1>
+          <p id="pAText"></p>
+          <input type="text" id="pAInput" />
+          <button id="pAButton">Send</button>
+          <hr>
+          <h1>Person B</h1>
+          <p id="pBText"></p>
+          <input type="text" id="pBInput" />
+          <button id="pBButton">Send</button>
+          <script>
+               var chatHistory;
+
+               function pAChatHistory () {
+                    chatHistory += pAInput.value + "/n";
+               }
+               pAButton.onclick = pAChatHistory;
+               
+               function pBChatHistory () {
+                    chatHistory += pBInput.value + "/n";
+               }
+               pBButton.onclick = pBChatHistory;
+          </script>
+     </body>
+     </html>

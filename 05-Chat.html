@@ -1,0 +1,26 @@
+<DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8" />
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+     <title>Chat</title>
+</head> 
+<body>
+     <h1>Chat</h1>
+     <p id="myText"></p>
+     <input type="text" id="myInput" />
+     <button id="myButton">Send</button>
+     <script>
+          function inputAction () {
+               myText.textContent = "💬";
+          }
+          function clickAction () {
+               myText.textContent = myInput.value;
+               myInput.value = "";
+          }
+          
+          myInput.oninput = inputAction;
+          myButton.onclick = clickAction;
+     </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Quiz</title>
+</head>
+<body>
+     <h1>Quiz Time!</h1>
+     <br>
+     <h2>Who is the creator of JavaScript?</h2>
+     <br>
+     <input type="radio" id="Rossum" name="Guess">
+     <label for="html">Guido van Rossum</label>
+     <br>
+     <input type="radio" id="Eich" name="Guess">
+     <label for="html">Brendan Eich</label>
+     <br>
+     <input type="radio" id="Torvalds" name="Guess">
+     <label for="html">Linus Torvalds</label>
+     <br>
+     <input type="radio" id="Gosling" name="Guess">
+     <label for="html">James Gosling</label>
+     <br><br>
+     <button id="submitButton">Check answer</button>
+     <h1 id="resultText"></h1>
+
+     <script>
+          function checkAnswer () {
+               if (Eich.checked) {
+                    resultText.textContent = "Correct! Brendan Eich released JavaScript in 1995.";
+               } 
+               else if (Rossum.checked) {
+                    resultText.textContent = "Incorrect! Guido van Rossum created Python! Try again.";
+               }
+               else if (Torvalds.checked) {
+                    resultText.textContent = "Incorrect! Linus Torvalds created Linux! Try again.";
+               }
+               else if (Gosling.checked) {
+                    resultText.textContent = "Close one! James Gosling created Java! Try again.";
+               }
+          }
+          submitButton.onclick = checkAnswer;
+          
+          </script>
+
+</body>
+</html>

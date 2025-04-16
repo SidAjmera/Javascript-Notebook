@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Hulk</title>
+</head>
+<body>
+     <h1 id="myTitle">My name is Bruce Banner.</h1>
+     <label for="">
+          Gamma Radiation:
+          <input id="myInput" type="range" min="400" max="600" value="400">
+     </label>
+     <br>
+     <img id="myImage" src="https://de4b74bc-f912-426d-aa82-df0ce119366c-00-1vaqhmvlmwi0o.sisko.replit.dev/images/bruce.png" alt="Picture of Bruce Banner">
+     <script>
+          function myFunction () {
+               myImage.src = "https://de4b74bc-f912-426d-aa82-df0ce119366c-00-1vaqhmvlmwi0o.sisko.replit.dev/images/hulk.png";
+               myTitle.textContent = "No, I am the HULK!";
+               myImage.style.height = myInput.value + "px";
+               if (myInput.value < 401) {
+                    myImage.src="https://de4b74bc-f912-426d-aa82-df0ce119366c-00-1vaqhmvlmwi0o.sisko.replit.dev/images/bruce.png"
+               } else {
+                    myImage.src="https://de4b74bc-f912-426d-aa82-df0ce119366c-00-1vaqhmvlmwi0o.sisko.replit.dev/images/hulk.png"
+               }
+          }
+          myInput.onchange = myFunction
+     </script>
+</body>
+</html>

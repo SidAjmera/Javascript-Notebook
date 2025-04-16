@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Collecting Inputs</title>
+</head>
+<body>
+     <h1>Collecting Inputs</h1>
+     <h2>The Best Coder in the World is <span id="MyText">...</span></h2>
+     <input type="text" id="MyInput"> <button id="MyButton">Change the Text!</button>
+     <script>
+          function MyFunction () {
+               MyText.textContent = MyInput.value;
+          }
+          MyButton.onclick = MyFunction;
+
+     </script>
+</body>
+</html>

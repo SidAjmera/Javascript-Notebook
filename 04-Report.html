@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Reprort</title>
+</head>
+<body>
+     <h1>Report</h1>
+     <label for="">
+          Student Name:
+          <input type="text" id="studentName">
+     </label>
+     <button id="myButton">Update!</button>
+     <h2><span id="name1"></span> is an outstanding student. I've really appreciated having <span id="name2"></span> in my class this year. If <span id="name3"></span> continues to put in effort, I can see great things ahead!</h2>
+     <script>
+          function myFunction () {
+               name1.textContent = studentName.value;
+               name2.textContent = studentName.value;
+               name3.textContent = studentName.value;
+          }
+          myButton.onclick = myFunction;
+     </script>
+</body>
+</html>
