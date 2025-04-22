@@ -1,0 +1,21 @@
+.square {
+     width: 30%;
+     background: grey;
+     float: left;
+     border-radius: 10%;
+     margin: 1.66%;
+     padding-bottom: 30%;
+}
+
+#container {
+     margin: 20px auto;
+     max-width: 600px;
+}
+
+h1 {
+     text-align: center;
+}
+
+h2 {
+     text-align: center;
+}

@@ -37,17 +37,3 @@
 .complete {
      text-decoration: line-through;
 }
-
-.square {
-     width: 30%;
-     background: grey;
-     float: left;
-     border-radius: 10%;
-     margin: 1.7%;
-     padding-bottom: 30%;
-}
-
-.container {
-     margin: 20px auto;
-     max-width: 600px;
-}
