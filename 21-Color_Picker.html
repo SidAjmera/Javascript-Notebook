@@ -8,7 +8,7 @@
 </head>
 <body>
      <h2>My color picker game</h2>
-     <h1>rgb(0, 0, 0)</h1>
+     <h1 id="rgbCode">rgb(0, 0, 0)</h1>
      <div id="container">
           <div class="square"></div>
           <div class="square"></div>
@@ -17,8 +17,11 @@
           <div class="square"></div>
           <div class="square"></div>
           <br>
-          <hi id="result"></hi>
+          <h1 id="result"></hi>
           <h1 id="resultEmoji"></h1>
+          <button id="restart">Next color!</button>
      </div>
+     <script src="colorPicker.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
 </body>
 </html>
