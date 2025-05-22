@@ -8,6 +8,12 @@ const BALL_RADIUS = 8;
 const PADDLE_WIDTH = 100;
 const PADDLE_HEIGHT = 20;
 
+const hit = new Audio('Media/Brick Hit Ground Sound Effect.mp3');
+
+var score = 0;
+
+
+
 const ball = {
      x: canvas.width/2,
      y: canvas.height/2, 
@@ -45,6 +51,7 @@ function update() {
      moveBall();
      ifOnEdgeBounce();
      ifOnPaddleBounce();
+     ifTouchingBrick();
 }
 
 function drawBall() {
@@ -69,6 +76,7 @@ function render() {
      drawBall();
      drawPaddle();
      drawBricks();
+     drawText(parseInt(score), 20, canvas.height - 20);
 }
 
 function game() {
@@ -93,11 +101,14 @@ function ifOnEdgeBounce() {
      if (ball.x < 0 || ball.x > canvas.width) {
           ball.dx = -ball.dx;
      }
+     
+     hit.play();
 }
 
 function ifOnPaddleBounce() {
      if (ball.y > paddle.y && ball.x < (paddle.x + paddle.width)) {
           ball.dy = -ball.dy;
+          hit.play();
      }
 }
 
@@ -113,18 +124,48 @@ function createBricksArray() {
      }
 }
 
+function drawText(text, x, y) {
+     ctx.fillStyle = "black";
+     ctx.font = "20px Arial";
+     ctx.fillText(text, x, y);
+}
+
 function drawBricks() {
      for (let i=0; i<5; i++) {
           let b = bricks[i];
-
+          if (b.status) {
           ctx.fillStyle = brick.fillColor;
           ctx.fillRect(b.x, b.y, brick.width, brick.height);
           ctx.strokeStyle = brick.strokeColor;
           ctx.strokeRect(b.x, b.y, brick.width, brick.height);
+          }
      }
 }
 
 createBricksArray();
+    
+
+function ifTouchingBrick() {
+
+
+     // Loop over all bricks
+     // For each brick, check if touching ball
+     // If yes, then toggle status (true to false)
+
+     for (let i = 0; i < bricks.length; i++) {
+          let b = bricks[i];
+           
+               if (b.status && ball.x + ball.radius > b.x && ball.x - ball.radius < b.x + brick.width && ball.y + ball.radius > b.y && ball.y - ball.radius < b.y + brick.height) {
+                         b.status = false;
+                         ball.dy = -ball.dy;
+                              }
+                              }
+
+          
+                              hit.play();
+                              score++;
+          }
+
 
 var FPS = 100;
 const myInterval = setInterval(game, 1000/FPS);
